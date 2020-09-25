@@ -4,3 +4,4 @@
 # keep empty dir for data
 data/*
 !data/README.md
+!data/participants_counts.csv
