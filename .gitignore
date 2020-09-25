@@ -1,0 +1,6 @@
+# checkpoints and logs
+*checkpoint.ipynb
+
+# keep empty dir for data
+data/*
+!data/README.md
