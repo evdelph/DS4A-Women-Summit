@@ -1,5 +1,6 @@
 # checkpoints and logs
 *checkpoint.ipynb
+__pycache__
 
 # keep empty dir for data
 data/*
