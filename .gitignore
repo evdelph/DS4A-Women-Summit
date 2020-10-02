@@ -6,5 +6,5 @@ __pycache__
 data/*
 !data/README.md
 !data/participants_counts.csv
-!raw 
-!interim
+ 
+
