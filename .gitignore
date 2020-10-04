@@ -1,10 +1,11 @@
 # checkpoints and logs
 *checkpoint.ipynb
 __pycache__
+.vscode
 
 # keep empty dir for data
 data/*
 !data/README.md
 !data/participants_counts.csv
- 
+
 
