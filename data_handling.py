@@ -35,6 +35,20 @@ def replace_codes_with_nan_inplace(data):
     data.replace(-88, np.nan, inplace=True)
     data.replace(-99, np.nan, inplace=True)
 
+    
+def get_col_list(col_name, num):
+    return [col_name + str(i) for i in range(1, num+1)]
+
+def drop_cols(dta):
+    cols_dict = {'WHEREFREE':7, 'FOODSUFRSN':5}
+    for c in list(cols_dict.keys()):
+        col_lst = get_col_list(c, cols_dict[c])
+        if c == 'FOODSUFRSN':
+            foodsuf_sum = dta[col_lst].sum(axis = 1).values
+            data1[(c+'_SUM')] = foodsuf_sum
+        dta.drop(col_lst, 1, inplace = True)
+    #return dta    
+
 def get_cleaned_combined_data():
     data = load_combined_raw_data()
 
@@ -44,5 +58,5 @@ def get_cleaned_combined_data():
 
     add_age_inplace(data)
     add_mental_vars_inplace(data)
-
+    drop_cols(data)
     return data
