@@ -45,7 +45,7 @@ def drop_cols(dta):
         col_lst = get_col_list(c, cols_dict[c])
         if c == 'FOODSUFRSN':
             foodsuf_sum = dta[col_lst].sum(axis = 1).values
-            data1[(c+'_SUM')] = foodsuf_sum
+            dta[(c+'_SUM')] = foodsuf_sum
         dta.drop(col_lst, 1, inplace = True)
     #return dta    
 
